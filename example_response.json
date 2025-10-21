@@ -1,0 +1,169 @@
+{
+  "summary": {
+    "winner": "buying",
+    "cost_difference": 17580,
+    "break_even_year": 4,
+    "time_horizon_years": 7
+  },
+  "key_metrics": {
+    "break_even": {
+      "years": 4,
+      "label": "4 years",
+      "description": null
+    },
+    "total_cost": {
+      "renting": 185640,
+      "buying": 168060,
+      "difference": 17580,
+      "winner": "buying",
+      "label": "$17,580",
+      "description": "less to buy"
+    },
+    "home_equity": {
+      "value": 214524,
+      "label": "$214,524",
+      "percentage": "53.6%"
+    },
+    "maintenance": {
+      "rate": 0.01,
+      "label": "1.0%",
+      "annual_cost": 4000
+    }
+  },
+  "wealth_metrics": {
+    "renter_portfolio": {
+      "value": 147832,
+      "label": "$147,832",
+      "description": "Investment portfolio"
+    },
+    "owner_equity": {
+      "value": 214524,
+      "label": "$214,524",
+      "description": "Home equity"
+    },
+    "wealth_advantage": {
+      "value": 66692,
+      "label": "$66,692",
+      "winner": "owner"
+    }
+  },
+  "cash_flow": {
+    "rent": {
+      "total": 185640,
+      "monthly_avg": 2207.6,
+      "yearly_avg": 26520
+    },
+    "own": {
+      "down_payment": 80000,
+      "closing_costs": 12000,
+      "total": 382584,
+      "monthly_avg": 3463.9,
+      "yearly_avg": 41512
+    }
+  },
+  "chart_data": {
+    "labels": [0, 1, 2, 3, 4, 5, 6, 7],
+    "datasets": [
+      {
+        "name": "Renting",
+        "data": [
+          0,
+          24000,
+          48720,
+          74227,
+          100554,
+          127736,
+          155808,
+          184809
+        ],
+        "color": "#ef4444",
+        "description": "Total rent paid over time"
+      },
+      {
+        "name": "Buying",
+        "data": [
+          92000,
+          129868,
+          166527,
+          201969,
+          236187,
+          269174,
+          300923,
+          168060
+        ],
+        "color": "#3b82f6",
+        "description": "Total ownership costs (including equity credit)"
+      }
+    ],
+    "crossover_point": 4
+  },
+  "recommendation": {
+    "summary": "Over 7 years, buying saves $17,580 compared to renting.",
+    "items": [
+      {
+        "type": "primary",
+        "title": "Buying is better in the long run",
+        "text": "Over 7 years, buying saves $17,580 compared to renting.",
+        "icon": "home"
+      },
+      {
+        "type": "info",
+        "title": "Break-even at year 4",
+        "text": "You'll start saving money after 4 years. Plan to stay at least this long.",
+        "icon": "calendar"
+      },
+      {
+        "type": "warning",
+        "title": "High mortgage rate",
+        "text": "At 7.0%, consider waiting for rates to drop or looking for adjustable rate options.",
+        "icon": "alert-circle"
+      }
+    ],
+    "confidence": 72
+  },
+  "raw_results": {
+    "total_rent_paid": 185640,
+    "total_own_paid": 168060,
+    "total_rent_cash_spent": 185640,
+    "total_own_cash_spent": 382584,
+    "renter_net_worth": 147832,
+    "owner_net_worth": 214524,
+    "total_rent_true_cost": 37808,
+    "total_own_true_cost": 168060,
+    "wealth_advantage": 66692,
+    "break_even_year": 4,
+    "net_proceeds": 214524,
+    "down_payment": 80000,
+    "closing_cost": 12000,
+    "equity_series": [
+      87234,
+      105689,
+      124987,
+      145158,
+      166237,
+      188259,
+      211263,
+      235290
+    ],
+    "renter_savings_series": [
+      96320,
+      112847,
+      128629,
+      143702,
+      158100,
+      171860,
+      185017,
+      197606
+    ],
+    "price_series": [
+      406000,
+      412180,
+      418545,
+      425098,
+      431840,
+      438774,
+      445903,
+      453229
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "folders": [
+    {
+      "path": "apps/api"
+    },
+    {
+      "path": "apps/web"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.venv": true,
+      "**/node_modules": true,
+      "**/.next": true
+    },
+    "python.defaultInterpreterPath": "${workspaceFolder:apps/api}/.venv/bin/python",
+    "editor.formatOnSave": true
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-toolsai.jupyter",
+      "ms-azuretools.vscode-docker",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "API: FastAPI (uvicorn)",
+        "type": "python",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": [
+          "app.main:app",
+          "--reload",
+          "--port",
+          "8080"
+        ],
+        "cwd": "${workspaceFolder:apps/api}",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder:apps/api}"
+        },
+        "console": "integratedTerminal"
+      },
+      {
+        "name": "WEB: Next.js dev",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder:apps/web}/node_modules/next/dist/bin/next",
+        "args": [
+          "dev",
+          "-p",
+          "3000"
+        ],
+        "cwd": "${workspaceFolder:apps/web}",
+        "runtimeExecutable": "node",
+        "console": "integratedTerminal"
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "API: Install deps",
+        "type": "shell",
+        "command": "python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+        "options": {
+          "cwd": "${workspaceFolder:apps/api}"
+        }
+      },
+      {
+        "label": "WEB: Install deps",
+        "type": "shell",
+        "command": "npm i",
+        "options": {
+          "cwd": "${workspaceFolder:apps/web}"
+        }
+      }
+    ]
+  }
+}
